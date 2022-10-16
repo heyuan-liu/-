@@ -9,7 +9,7 @@ is_house = False
 st.sidebar.subheader('第一步--选择方案')
 type = st.sidebar.selectbox(
     '选择房车',
-    ('车','房')
+    ('车', '房')
 )
 if type == '房':
     is_house = True
@@ -48,6 +48,7 @@ house = st.sidebar.selectbox(
     help = '请在第三步中自定义还款期限',
     disabled = not is_house
 )
+    
 aera = st.sidebar.number_input(
     "房屋面积(平方米)",
     value = 100,
@@ -55,6 +56,11 @@ aera = st.sidebar.number_input(
     step = 1 
 )
 
+if is_house:
+    car = ''
+else:
+    house = ''
+    aera = ''
 
 ft = open('./ch.txt', 'r', encoding='utf-8')
 pro_list = [120, 0.05, 200]
@@ -135,6 +141,53 @@ if init_fund == 0:     #无投资计划
         period, interest = get_period(pv, rate, payment)
     else:
         st.subheader('还款期限和每月还款额至少有一个大于0')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
         sys.exit()       
     payment_fund_actual, payment_add = 0, 0
 else:   #有投资计划
@@ -146,6 +199,54 @@ else:   #有投资计划
         period, payment_fund_actual, payment_add, interest = get_period_w_invest(pv, rate, init_fund, ret, payment)
     else:
         st.subheader('还款期限和每月还款额至少有一个大于0')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
+        st.write(' ')
         sys.exit()
 
 
